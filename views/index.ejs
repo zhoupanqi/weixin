@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+	<title>有张心愿机票等着你</title>
+	<link rel="stylesheet" href="css/reset.css" />
+	<link rel="stylesheet" href="css/index.css" />
+</head>
+
+<body>
+	<div class="load loadz" style="display: block;">
+		<img src="img/planss.png" class="loadingy loadimg loadinanimt" />
+		<img src="img/loading.png" class="loadingz loadimg loadinanimt" />
+		<span class="loading_number"></span>
+	</div>
+	<div class="plane_content" id="viewbox" view-mode="w" view-rotation="auto" view-scale="noborder" view-width="750" view-height="1206"
+	 view-align="">
+		<div id="clipArea"></div>
+		<img src="img/xuanz.png" class="xz play" />
+		<button id="clipBtn">截取</button>
+		<div class="plane01" style="display: block;">
+			<div class="plane" id="plane"><img src="img/plane.png" /></div>
+			<div class="ticket" id="ticket"><img src="img/ticket.png" /></div>
+			<div class="earth"><img src="img/earth.png" /></div>
+			<div class="button_gz" id="button_gz"><img src="img/button_gz.png" /></div>
+			<div class="title" id="title"><img src="img/title.png" /></div>
+			<div class="button" id="but"><img src="img/button.png" /></div>
+		</div>
+		<div class="popupbox" style="display: none;">
+			<span class="close"></span>
+			<span class="rule">
+				文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文
+			</span>
+		</div>
+		<div class="plane02" style="display: none;">
+			<div class="title2"><img src="img/title2.png" /></div>
+			<div class="plane_photobox" style="display: block;">
+				<div class="filebox">
+					<img src="img/img2.png" class="imgfile" />
+					<input type="file" id="file" accept="image/*">
+				</div>
+				<div class="ins address" id="addresslist">
+					<select id="province">
+						<option>选择洲</option>
+						<option>亚洲</option>
+						<option>欧洲</option>
+						<option>北美洲</option>
+						<option>南美洲</option>
+						<option>非洲</option>
+						<option>大洋洲</option>
+						<option>南极洲</option>
+					</select>
+					<select class="city" style="display: inline-block;left: 412px;width: 200px;">
+						<option>选择国家</option>
+					</select>
+					<select class="city" style="display: none;left: 412px;width: 200px;">
+						<option v-for="item in data01">
+							{{item}}
+						</option>
+					</select>
+					<select class="city" style="display: none;left: 412px;width: 200px;">
+						<option v-for="item in data02">
+							{{item}}
+						</option>
+					</select>
+					<select class="city" style="display: none;left: 412px;width: 200px;">
+						<option v-for="item in data03">
+							{{item}}
+						</option>
+					</select>
+					<select class="city" style="display: none;left: 412px;width: 200px;">
+						<option v-for="item in data04">
+							{{item}}
+						</option>
+					</select>
+					<select class="city" style="display: none;left: 412px;width: 200px;">
+						<option v-for="item in data05">
+							{{item}}
+						</option>
+					</select>
+					<select class="city" style="display: none;left: 412px;width: 200px;">
+						<option v-for="item in data06">
+							{{item}}
+						</option>
+					</select>
+					<select class="city" style="display: none;left: 412px;width: 200px;">
+						<option>南极洲</option>
+					</select>
+				</div>
+				<div class="ins phon">
+					<input type="text" name="phone" placeholder="联系电话(通知领奖)" value="" id="phone" />
+				</div>
+				<button type="submit" class="btn"></button>
+			</div>
+			<div class="speakbox" style="display: none;">
+				<textarea name="text_speak" maxlength="40" id="txtare_id">我希望...</textarea>
+				<div class="xj"><img src="img/xj.png" /></div>
+				<button type="submit" class="btn_cp"></button>
+			</div>
+		</div>
+	</div>
+	<div class="plane03">
+		<div class="button_up"><img src="img/button_up.png" /></div>
+		<div class="yaz" id="s4" style="opacity: 0;">
+			<img src="img/01.png" style="position: absolute;top: 0;left: 0;" class="succimg" />
+			<img src="img/img2.png" class="imgbj" style="width: 2rem;height: 2rem;top: 1rem;left: 3rem;" />
+			<span class="wx_name"><%= nickname%></span>
+			<span class="country"></span>
+			<span class="speak">
+				我希望可以带着家人一起环游世界,享受慢生活....
+			</span>
+		</div>
+	</div>
+	<span class="yz" style="display: none;">中国、蒙古、朝鲜、韩国、日本、菲律宾、越南、老挝、柬埔寨、缅甸、泰国、马来西亚、文莱、新加坡、印度尼西亚、东帝汶、尼泊尔、不丹、孟加拉国、印度、巴基斯坦、斯里兰卡、马尔代夫、西伯利亚地区、哈萨克斯坦、吉尔吉斯斯坦、塔吉克斯坦、乌兹别克斯坦、土库曼斯坦、阿富汗、伊拉克、伊朗、叙利亚、约旦、黎巴嫩、以色列、巴勒斯坦、沙特阿拉伯、巴林、卡塔尔、科威特、阿联酋、阿曼、也门、格鲁吉亚、亚美尼亚、阿塞拜疆、土耳其、塞浦路斯</span>
+	<span class="oz" style="display: none;">芬兰、瑞典、挪威、冰岛、丹麦 、法罗群岛（丹）、爱沙尼亚、拉脱维亚、立陶宛、白俄罗斯、俄罗斯、乌克兰、摩尔多瓦、波兰、捷克、斯洛伐克、匈牙利、德国、奥地利、瑞士、列支敦士登、英国、爱尔兰、荷兰、比利时、卢森堡、法国、摩纳哥、罗马尼亚、保加利亚、塞尔维亚、马其顿、阿尔巴尼亚、希腊、斯洛文尼亚、克罗地亚、波斯尼亚和墨塞哥维那、意大利、梵蒂冈、圣马力诺、马耳他、西班牙、葡萄牙、安道尔</span>
+	<span class="bmz" style="display: none;">美国、加拿大、墨西哥、危地马拉、伯利兹 、萨尔瓦多、洪都拉斯、巴拿马 、巴哈马、古巴、牙买加、海地、多米尼加、哥斯达黎加、圣基茨和尼维斯、安提瓜和巴布达、多米尼克、圣卢西亚、圣文森特和格林纳丁斯、巴巴多斯、格林纳达、特立尼达和多巴哥、尼加拉瓜</span>
+	<span class="nmz" style="display: none;">厄瓜多尔、哥伦比亚、委内瑞拉、秘鲁、巴西、智利、乌拉圭、巴拉圭、阿根廷、玻利维亚、圭亚那、苏里南、法属圭亚那、福克兰群岛、南乔治亚岛和南桑威奇群岛</span>
+	<span class="fz" style="display: none;">阿尔及利亚、布基纳法索、马达加斯加、埃及、布隆迪、赤道几内亚、多哥、安哥拉、埃塞俄比亚、尼日利亚、南非、塞内加尔、佛得角、圣多美和普林西比、斯威士兰、尼日尔、毛里求斯、几内亚比绍、厄立特里亚、坦桑尼亚、苏丹、几内亚、科特迪瓦、乍得、科摩罗、塞拉利昂、中非、赞比亚、乌干达、毛里塔尼亚、利比亚、喀麦隆、吉布提、利比里亚、津巴布韦、刚果、马里、莱索托、加蓬、刚果民主共和国、摩洛哥、冈比亚、加纳、肯尼亚、马拉维、纳米比亚、塞舌尔、博茨瓦纳、莫桑比克、贝宁、卢旺达、索马里、突尼斯</span>
+	<span class="dyz" style="display: none;">澳大利亚、帕劳、密克罗尼西亚联邦、马绍尔群岛、瑙鲁、巴布亚新几内亚、所罗门群岛、瓦努阿图、图瓦卢、斐济、萨摩亚、基里巴斯、汤加、新西兰</span>
+	<audio loop="loop" src="img/12.mp3" id="bgm"></audio>
+	<script type="text/javascript" src="http://g.tbcdn.cn/mtb/lib-flexible/0.3.4/??flexible.js"></script>
+	<script type="text/javascript" src="js/jquery1.12.4.js"></script>
+	
+	<script type="text/javascript" src="js/vue.min.js"></script>
+	<script type="text/javascript" src="js/self-min.js"></script>
+	<script type="text/javascript" src="js/m.Tween.js"></script>
+	<script type="text/javascript" src="js/iscroll-zoom.js"></script>
+	<script type="text/javascript" src="js/hammer.js"></script>
+	<script type="text/javascript" src="js/lrz.all.bundle.js"></script>
+	<script type="text/javascript" src="js/jquery.photoClip.min.js"></script>
+	<script type="text/javascript" src="js/html4canvas.js"></script>
+	<script type="text/javascript" src="js/imageLoad.js"></script>
+	<script type="text/javascript" src="http://res.wx.qq.com/open/js/jweixin-1.2.0.js" ></script>
+	<script type="text/javascript" src="js/index.js"></script>
+	<script type="text/javascript">
+		var lsit = new Vue({//vue数据渲染
+			el: '#addresslist',
+			data: {
+				data01: [],
+				data02: [],
+				data03: [],
+				data04: [],
+				data05: [],
+				data06: [],
+			}
+		})
+		city();
+		function city() {
+			var yz = $('.yz').html();
+			var oz = $('.oz').html();
+			var bmz = $('.bmz').html();
+			var nmz = $('.nmz').html();
+			var fz = $('.fz').html();
+			var dyz = $('.dyz').html();
+			for (var i = 0, yzs = yz.length; i < yzs; i++) {
+				lsit.data01 = yz.split('、');
+			}
+			for (var i = 0, ozs = oz.length; i < ozs; i++) {
+				lsit.data02 = oz.split('、');
+			}
+			for (var i = 0, bmzs = bmz.length; i < bmzs; i++) {
+				lsit.data03 = bmz.split('、');
+			}
+			for (var i = 0, nmzs = nmz.length; i < nmzs; i++) {
+				lsit.data04 = nmz.split('、');
+			}
+			for (var i = 0, fzs = fz.length; i < fzs; i++) {
+				lsit.data05 = fz.split('、');
+			}
+			for (var i = 0, dyzs = dyz.length; i < dyzs; i++) {
+				lsit.data06 = dyz.split('、');
+			}
+		}
+
+		getWxSignature();
+		function getWxSignature() {
+			$.ajax({
+				url: "/activityWxShaer",
+				type: 'post',
+				data: { urlhref: location.href },
+				success: function (jsons) {
+					var jsonlist = JSON.stringify(jsons);
+					var data=JSON.parse(jsonlist);
+					console.log(data.appID);
+					wx.config({
+						debug: false, // 开启调试模式,调用的所有api的返回值会在客户端alert出来，若要查看传入的参数，可以在pc端打开，参数信息会通过log打出，仅在pc端时才会打印。
+						appId: data.appID, // 必填，公众号的唯一标识
+						timestamp: data.timestamp, // 必填，生成签名的时间戳
+						nonceStr: data.nonceStr, // 必填，生成签名的随机串
+						signature: data.signature, // 必填，签名，见附录1
+						jsApiList: [
+							'onMenuShareTimeline',
+							'onMenuShareAppMessage',
+							'onMenuShareQQ',
+							'onMenuShareWeibo',
+							'onMenuShareQZone'
+						] // 必填，需要使用的JS接口列表，所有JS接口列表见附录2
+					});
+					shareFunc();// 微信的分享接口 里面为ready
+				}
+			});
+		}
+		function shareFunc() {
+			wx.ready(function () {
+				var title = '有张心愿机票等着你';
+				var desc = '快来哦';
+				var linkUrl = 'http://zpqsix.cn/';
+				var shareImgUrl = 'http://zpqsix.cn/img/share.png';
+				//分享到朋友圈
+				wx.onMenuShareTimeline({
+					title: title, // 分享标题
+					link: linkUrl, // 分享链接
+					imgUrl: shareImgUrl, // 分享图标
+					success: function () { },
+					cancel: function () { }
+				});
+				// 分享给朋友
+				wx.onMenuShareAppMessage({
+					title: title, // 分享标题
+					desc: desc, // 分享描述
+					link: linkUrl, // 分享链接
+					imgUrl: shareImgUrl, // 分享图标
+					type: 'link',
+					dataUrl: '',
+					success: function () { },
+					cancel: function () { }
+				});
+				// 分享到QQ
+				wx.onMenuShareQQ({
+					title: title, // 分享标题
+					desc: desc, // 分享描述
+					link: linkUrl, // 分享链接
+					imgUrl: shareImgUrl, // 分享图标
+					success: function () {
+						// 用户确认分享后执行的回调函数
+					},
+					cancel: function () {
+						// 用户取消分享后执行的回调函数
+					}
+				});
+				// 分享到腾讯微博
+				wx.onMenuShareWeibo({
+					title: title, // 分享标题
+					desc: desc, // 分享描述
+					link: linkUrl, // 分享链接
+					imgUrl: shareImgUrl, // 分享图标
+					success: function () {
+						// 用户确认分享后执行的回调函数
+					},
+					cancel: function () {
+						// 用户取消分享后执行的回调函数
+					}
+				});
+				// 分享到QQ空间
+				wx.onMenuShareQZone({
+					title: title, // 分享标题
+					desc: desc, // 分享描述
+					link: linkUrl, // 分享链接
+					imgUrl: shareImgUrl, // 分享图标
+					success: function () {
+						// 用户确认分享后执行的回调函数
+					},
+					cancel: function () {
+						// 用户取消分享后执行的回调函数
+					}
+				});
+			});
+		}
+	</script>
+</body>
+
+</html>

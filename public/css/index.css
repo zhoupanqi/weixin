@@ -1,0 +1,425 @@
+.plane_content {
+	width: 100%;
+	background: url(../img/gifbg.gif) no-repeat;
+	background-size: cover;
+	/* background-size: cover; */
+	overflow: hidden;
+	position: relative;
+}
+
+.plane {
+	width: 543px;
+	position: absolute;
+	top: 28px;
+	/* left: 0; */
+}
+
+.ticket {
+	position: absolute;
+	width: 150px;
+	left: 0;
+	right: 0;
+	margin: 0 auto;
+	top: 248px;
+	z-index: 1;
+}
+
+.earth {
+	position: absolute;
+	bottom: -170px;
+	width: 706px;
+	left: 0;
+	right: 0;
+	margin: 0 auto;
+}
+
+.button_gz {
+	width: 235px;
+	position: absolute;
+	right: 0;
+	top: 452px;
+	z-index: 2;
+}
+
+.title {
+	width: 690px;
+	position: absolute;
+	top: 112px;
+	left: 64px;
+	transform-origin: right bottom;
+	transform: scale(1);
+}
+
+.button {
+	position: absolute;
+	z-index: 3;
+	width: 250px;
+	left: 0;
+	right: 0;
+	margin: 0 auto;
+	bottom: 110px;
+}
+
+.popupbox {
+	width: 90%;
+	height: 1124px;
+	background: url(../img/popup.png) no-repeat;
+	z-index: 5;
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	margin: auto;
+	background-size: 100%;
+}
+
+.close {
+	position: absolute;
+	width: 48px;
+	height: 48px;
+	/* background: #000; */
+	right: 70px;
+	top: 54px;
+	z-index: 2;
+}
+
+.rule {
+	position: absolute;
+	width: 70%;
+	font-size: 30px;
+	height: 414px;
+	left: 0;
+	right: 0;
+	top: 200px;
+	margin: 0 auto;
+	overflow-y: auto;
+	letter-spacing: 2px;
+	text-align: justify;
+}
+
+.title2 {
+	width: 710px;
+	position: absolute;
+	top: 0;
+	left: 15px;
+}
+
+.filebox {
+	position: absolute;
+	width: 372px;
+	height: 372px;
+	left: 0;
+	right: 0;
+	margin: 0 auto;
+	top: 290px;
+}
+
+.imgfile {
+	border-radius: 10px;
+}
+
+#file {
+	width: 100%;
+	height: 100%;
+	opacity: 0;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	right: 0;
+	margin: 0 auto;
+}
+
+.xz {
+	position: absolute;
+	top: .2rem;
+	left: 0;
+	right: 0;
+	width: 128px;
+	height: 128px;
+	z-index: 120;
+	margin: 0 auto;
+	display: none;
+	opacity: 0.6;
+}
+
+.play {
+	animation: r 1s linear infinite alternate;
+	-webkit-animation: r 1s linear infinite alternate;
+}
+
+@keyframes r {
+	0% {
+		transform: rotate(0)
+	}
+	100% {
+		transform: rotate(90deg)
+	}
+}
+
+@-webkit-keyframes r {
+	0% {
+		-webkit-transform: rotate(0)
+	}
+	100% {
+		-webkit-transform: rotate(90deg)
+	}
+}
+
+.ins {
+	position: absolute;
+	width: 627px;
+	height: 96px;
+	left: 0;
+	right: 0;
+	margin: 0 auto;
+}
+
+.address {
+	background: url(../img/address.png) no-repeat;
+	bottom: 28%;
+}
+
+.phon {
+	background: url(../img/phon.png) no-repeat;
+	bottom: 15%;
+}
+
+#phone {
+	font-size: 30px;
+	position: absolute;
+	right: 0;
+	width: 350px;
+	height: 60px;
+	top: 18px;
+	color: #3886c8;
+}
+
+.btn {
+	position: absolute;
+	width: 393px;
+	height: 120px;
+	background: url(../img/confirm.png) no-repeat;
+	left: 0;
+	right: 0;
+	margin: 0 auto;
+	bottom: 2%;
+}
+
+#clipArea {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: #444;
+	z-index: 100;
+	display: none;
+}
+
+#clipBtn {
+	position: absolute;
+	width: 200px;
+	bottom: 75px;
+	left: 0;
+	right: 0;
+	color: #fff;
+	/* line-height: .6rem; */
+	background: #294579;
+	border: 1px solid #ddd;
+	border-radius: 4px;
+	overflow: hidden;
+	padding: 8px 0;
+	z-index: 120;
+	font-size: 36px;
+	margin: 0 auto;
+	display: none;
+}
+
+select {
+	border: none;
+	height: 95px;
+	width: 190px;
+	line-height: 40px;
+	-webkit-appearance: none;
+	position: absolute;
+	left: 218px;
+	text-align: center;
+	text-align-last: center;
+	font-size: 25px;
+	background-color: #fff;
+	color: #ababab;
+	outline: none;
+	text-align: justify;
+}
+select:after{
+	content: '';
+    width: 100%;
+    display: inline-block;
+}
+
+option {
+	-moz-appearance: none;
+	/* Firefox */
+	-webkit-appearance: none;
+	/* Safari 和 Chrome */
+	appearance: none;
+	font-size: 20px;
+}
+
+textarea {
+	position: absolute;
+	width: 594px;
+	height: 490px;
+	border-radius: 20px;
+	left: 0;
+	right: 0;
+	margin: 0 auto;
+	top: 292px;
+	font-size: 30px;
+	padding: 20px;
+	color: #ababab;
+}
+
+.xj {
+	position: absolute;
+	width: 627px;
+	height: 237px;
+	left: 0;
+	right: 0;
+	margin: 0 auto;
+	top: 702px;
+}
+
+.btn_cp {
+	position: absolute;
+	width: 393px;
+	height: 120px;
+	background: url(../img/btn_cp.png) no-repeat;
+	left: 0;
+	right: 0;
+	margin: 0 auto;
+	bottom: 2%;
+}
+
+.plane03 {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background-color: #FFFFFF;
+	z-index: 3;
+	display: none;
+}
+
+.yaz {
+	position: absolute;
+	/*background: url(../img/01.png) no-repeat;*/
+	width: 100%;
+	height: 16rem;
+	margin: auto;
+	/* margin-top: -608px; */
+	/*background-size: cover;*/
+	top: 0;
+	bottom: 0;
+	margin: auto;
+	/* transform: scale(.62); */
+	/* -webkit-transform: scale(.62); */
+	background-color: #fff;
+	overflow: hidden;
+}
+
+.imgbj {
+	position: absolute;
+	width: 150px;
+	height: 150px;
+	left: 218px;
+	top: 84px;
+	transform: rotate(90deg);
+	border-radius: 10px;
+}
+
+.opacity0 {
+	position: absolute;
+	z-index: 222;
+	left: 0;
+	top: 0;
+	width: 100%;
+	opacity: 0;
+}
+.speak {
+	position: absolute;
+	font-size: .4rem;
+	top: 12.5rem;
+	width: 4rem;
+	left: 2rem;
+	height: 2.2rem;
+	transform: rotate(90deg);
+	font-weight: 500;
+}
+.country{
+	position: absolute;
+	transform: rotate(90deg);
+	/* font-weight: 500; */
+	font-size: 0.3rem;
+	top: 8.8rem;
+	width: 2.5rem;
+	left: 3.4rem;
+	opacity: .6;
+}
+.wx_name{
+	position: absolute;
+	transform: rotate(90deg);
+	/* font-weight: 500; */
+	font-size: 0.3rem;
+	top: 5.3rem;
+	width: 2.4rem;
+	left: 1.8rem;
+	opacity: .6;
+}
+.load {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	left: 0;
+	top: 0;
+	background-color: #59bef9;
+	overflow: hidden;
+}
+
+.loadz {
+	z-index: 220;
+}
+.loadimg {
+	width: 2rem;
+	height: auto;
+	margin: 0 auto;
+}
+
+.loadingy {
+	margin-top: 50%;
+	width: 6rem;
+	margin-left: 1.4rem;
+}
+.loadingz {
+	margin-top: .5rem;
+}
+.loading_number {
+	width: 100%;
+	font: 22px/1 HelveticaNeue, PingFangSC, "Microsoft Yahei";
+	color: #fff;
+	display: block;
+	text-align: center;
+	font-weight: bold;
+	font-size: .4rem;
+	margin-top: .2rem;
+}
+.button_up{
+	position: absolute;
+	width: 1.2rem;
+	height: 3rem;
+	left: .3rem;
+	top: -11rem;
+	bottom: 0;
+	z-index: 333;
+	margin: auto;
+}
